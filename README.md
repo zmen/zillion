@@ -1,5 +1,7 @@
 # zillion
 
+> Yet another mobile UI components of VueJs
+
 ## Project setup
 ```
 npm install
