@@ -9,7 +9,7 @@
 // as it's impossible to get component instance as provide in class-style
 export default {
   name: 'Tabbar',
-  props: ['value'],
+  props: ['value', 'icon'],
   data()  {
     return {
       children: [],

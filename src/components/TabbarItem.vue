@@ -3,7 +3,9 @@
     :class="'zl-tabbar-item' + (active ? '--active': '--inactive')"
     @click="onClick"
   >
-    <div class="zl-tabbar-item__icon"></div>
+    <div class="zl-tabbar-item__icon" v-if="icon">
+      <icon :name="icon" :scale="1.5" />
+    </div>
     <div class="zl-tabbar-item__text">
       <slot />
     </div>
@@ -18,13 +20,14 @@ import {
   Inject,
   Vue,
 } from 'vue-property-decorator';
+import Icon from '@/components/Icon.vue';
 
 // move it to util
 function flattenVNodes(vnodes: VNode[]) {
   const result: VNode[] = [];
 
   function traverse(ivnodes: VNode[]) {
-    ivnodes.forEach((vnode) => {
+    vnodes.forEach((vnode) => {
       result.push(vnode);
       if (vnode.children) {
         traverse(vnode.children);
@@ -36,7 +39,9 @@ function flattenVNodes(vnodes: VNode[]) {
   return result;
 }
 
-@Component
+@Component({
+  components: { Icon },
+})
 export default class TabbarItem extends Vue {
   @Prop() private readonly name!: number | string;
 
@@ -77,6 +82,7 @@ export default class TabbarItem extends Vue {
   justify-content: center;
   align-items: center;
   flex: 1;
+  font-size: 14px;
 }
 .zl-tabbar-item--active {
   @extend .zl-tabbar-item;

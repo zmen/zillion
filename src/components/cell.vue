@@ -1,7 +1,7 @@
 <template>
   <div class="zl-cell" :class="{disabled: disabled}">
     <div class="zl-cell__info">
-      <div class="zl-cell__title">{{ title }}</div>
+      <div class="zl-cell__title"><slot /><span>{{ title }}</span></div>
       <div class="zl-cell__value">{{ content }}</div>
     </div>
     <div class="zl-cell__description">{{ description }}</div>
@@ -43,6 +43,9 @@ export default class Cell extends Vue {
   }
   &__title {
     text-transform: capitalize;
+    span {
+      margin-left: 4px;
+    }
   }
   &.disabled &__title{
     color: #ebedf0;

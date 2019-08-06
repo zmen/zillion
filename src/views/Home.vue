@@ -6,62 +6,63 @@
         <h2 class="home__sub-title">Yet another Mobile UI Components of VueJs</h2>
       </div>
       <panel title="Basic" description="basic components" class="home__panel">
-        <cell title="button" />
-        <cell title="cell" />
-        <cell title="flexbox" />
-        <cell title="icon" />
+        <cell title="button"> <icon name="Buttons" /></cell>
+        <cell title="cell"><icon name="cell" /></cell>
+        <cell title="flexbox"><icon name="stack" /></cell>
+        <cell title="icon"><icon name="icon" /></cell>
       </panel>
       <panel title="Display" description="component for display data" class="home__panel">
-        <cell title="panel" />
-        <cell title="sticky" />
+        <cell title="panel"><icon name="definedpanel" /></cell>
+        <cell title="sticky"><icon name="stickynote" /></cell>
+        <cell title="list"><icon name="list" /></cell>
+        <cell title="loading"><icon name="Loading"/></cell>
+        <cell title="lazyload"><icon name="image" /></cell>
         <cell title="swiper" />
-        <cell title="list" />
         <cell title="skeleton" />
-        <cell title="loading" />
-        <cell title="lazyload" />
         <cell title="coupon" />
       </panel>
       <panel title="Popups" description="poup, actionsheet, etc" class="home__panel">
-        <cell title="popup" />
+        <cell title="popup"><icon name="popup" /></cell>
+        <cell title="dialog"></cell>
         <cell title="actionsheet" />
-        <cell title="dialog" />
       </panel>
       <panel title="Form" description="form items" class="home__panel">
+        <cell title="upload"><icon name="Cloudupload"/></cell>
+        <cell title="datepicker"><icon name="date" /></cell>
+        <cell title="address"><icon name="address" /></cell>
+        <cell title="switch" />
+        <cell title="slider" />
         <cell title="input" />
         <cell title="textarea" />
-        <cell title="upload" />
-        <cell title="switch" />
-        <cell title="datepicker" />
-        <cell title="slider" />
-        <cell title="address" />
       </panel>
       <panel title="Navigation">
-        <cell title="tab" />
-        <cell title="tabbar" />
-        <cell title="search" />
-        <cell title="autocomplete" />
-        <cell title="header" />
+        <cell title="tab"><icon name="tabs" /></cell>
+        <cell title="tabbar"><icon name="tabbar" /></cell>
+        <cell title="search"><icon name="search" /></cell>
+        <cell title="header"><icon name="Header" /></cell>
       </panel>
     </div>
     <tabbar class="home__footer" v-model="tab">
-      <tabbar-item name="home">Home</tabbar-item>
-      <tabbar-item name="demo">Demo</tabbar-item>
+      <tabbar-item name="home" icon="home" @click.native="$router.push('/')">Home</tabbar-item>
+      <tabbar-item name="demo" icon="icon" @click.native="$router.push('/demo')">Demo</tabbar-item>
     </tabbar>
   </div>
 </template>
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
-import Tabbar from '@/components/tabbar.vue';
-import TabbarItem from '@/components/tabbar-item.vue';
-import Panel from '@/components/panel.vue';
-import Cell from '@/components/cell.vue';
+import Tabbar from '@/components/Tabbar.vue';
+import TabbarItem from '@/components/TabbarItem.vue';
+import Panel from '@/components/Panel.vue';
+import Cell from '@/components/Cell.vue';
+import Icon from '@/components/Icon.vue';
 
 @Component({
   components: {
     Tabbar,
     TabbarItem,
     Panel,
+    Icon,
     Cell,
   },
 })
