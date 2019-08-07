@@ -16,6 +16,7 @@ import {
   Vue,
 } from 'vue-property-decorator';
 import Icon from '@/components/Icon.vue';
+import Grid from './Grid.vue';
 
 @Component({
   components: { Icon },
@@ -27,8 +28,7 @@ export default class GridItem extends Vue {
   @Prop() private readonly icon!: string;
 
   get gridStyle() {
-    // @ts-ignore
-    const { column } = this.$parent;
+    const { column } = this.$parent as Grid;
     const percent = (100 / column) + '%';
     return {
       flexBasis: percent,
@@ -37,8 +37,7 @@ export default class GridItem extends Vue {
   }
 
   get contentStyle() {
-    // @ts-ignore
-    const { gutter, column } = this.$parent;
+    const { gutter, column } = this.$parent as Grid;
     const index = this.$parent.$children.indexOf(this);
     const style = {
       marginRight: '0px',

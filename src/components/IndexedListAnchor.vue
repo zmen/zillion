@@ -11,13 +11,15 @@ import {
   Prop,
 } from 'vue-property-decorator';
 
+import IndexedList from './IndexedList.vue';
+
 @Component
 export default class IndexedListAnchor extends Vue {
+
   @Prop() private readonly index!: number|string;
 
   private mounted() {
-    // @ts-ignore
-    const { list, offsets } = this.$parent;
+    const { list, offsets } = this.$parent as IndexedList;
     if (list.indexOf(this) === -1) {
         list.push(this);
         offsets.push(this.$el.getBoundingClientRect().top);

@@ -23,13 +23,14 @@
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
 import TouchMixin from '@/mixins/touch.ts';
+import IndexedListAnchor from './IndexedListAnchor.vue';
 
 @Component
 export default class IndexedList extends TouchMixin {
 
-  private list: string[] = [];
+  public list: IndexedListAnchor[] = [];
 
-  private offsets: number[] = [];
+  public offsets: number[] = [];
 
   private selfOffset: number = 0;
 

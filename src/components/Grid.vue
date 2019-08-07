@@ -14,11 +14,11 @@ import {
 @Component({})
 export default class Grid extends Vue {
 
+  @Prop({default: 4}) public readonly column!: number;
+
+  @Prop({default: 0}) public readonly gutter!: number;
+
   @Prop() private readonly title!: string;
-
-  @Prop({default: 4}) private readonly column!: number;
-
-  @Prop({default: 0}) private readonly gutter!: number;
 
   get style() {
     return this.gutter ? { paddingLeft: this.gutter + 'px' } : undefined;
