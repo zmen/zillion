@@ -43,6 +43,7 @@ function flattenVNodes(vnodes: VNode[]) {
   components: { Icon },
 })
 export default class TabbarItem extends Vue {
+
   @Prop() private readonly name!: number | string;
 
   @Prop() private readonly icon!: string;

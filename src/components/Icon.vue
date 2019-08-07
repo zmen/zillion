@@ -10,8 +10,11 @@
 import { Component, Prop, Vue} from 'vue-property-decorator';
 @Component({})
 export default class Icon extends Vue {
+
   @Prop() private readonly name!: string;
+
   @Prop({default: 1}) private readonly scale!: number;
+
   @Prop({default: false}) private readonly animate!: boolean;
 
   get className() {

@@ -17,11 +17,17 @@ import Icon from '@/components/Icon.vue';
   },
 })
 export default class Button extends Vue {
+
   @Prop({default: false}) private readonly loading!: boolean;
+
   @Prop({default: 'default'}) private readonly type!: string;
+
   @Prop({default: false}) private readonly round!: boolean;
+
   @Prop({default: 'normal'}) private readonly size!: string;
+
   @Prop({default: false}) private readonly disabled!: boolean;
+
   private get buttonClass() {
     return {
       primary: this.type === 'primary',
