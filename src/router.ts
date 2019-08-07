@@ -33,6 +33,10 @@ export default new Router({
         path: 'button',
         name: 'button',
         component: () => import(/* webpackChunkName: "button" */ './views/DemoButton.vue'),
+      }, {
+        path: 'indexed',
+        name: 'indexed',
+        component: () => import(/* webpackChunkName: "indexed" */ './views/DemoIndexedList.vue'),
       }],
     },
   ],

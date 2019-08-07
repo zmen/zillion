@@ -14,7 +14,7 @@
       <panel title="Display" description="component for display data" class="home__panel">
         <cell title="panel"><icon name="definedpanel" /></cell>
         <cell title="sticky"><icon name="stickynote" /></cell>
-        <cell title="list"><icon name="list" /></cell>
+        <cell title="indexed list"><icon name="list" /></cell>
         <cell title="loading"><icon name="Loading"/></cell>
         <cell title="lazyload"><icon name="image" /></cell>
         <cell title="swiper" />

@@ -19,7 +19,7 @@
         <grid :column="4">
           <grid-item text="panel" icon="definedpanel" />
           <grid-item text="sticky" icon="stickynote" />
-          <grid-item text="list" icon="list" />
+          <grid-item text="indexed list" icon="list" @click.native="goto('/demo/indexed')" />
           <grid-item text="loading" icon="Loading" />
           <grid-item text="lazyload" icon="image" />
           <grid-item text="swiper" />
@@ -109,7 +109,6 @@ export default class Home extends Vue {
     flex: 1;
     overflow: scroll;
     -webkit-overflow-scrolling: touch;
-    padding-bottom: 100px;
   }
   &__title {
     font-size: 14px;

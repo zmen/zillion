@@ -31,8 +31,10 @@ export default class Cell extends Vue {
   &__info {
     display: flex;
     justify-content: space-between;
-    height: 2em;
-    line-height: 2em;
+    height: 3em;
+    line-height: 3em;
+    padding-left: 6px;
+    box-sizing: border-box;
     &__value {
       flex: 1;
     }
