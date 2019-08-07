@@ -46,10 +46,11 @@ export default {
 
 <style lang="scss" scoped>
 .zl-tabbar {
-  height: 49px;
+  height: 47px;
   width: 100%;
   display: flex;
   border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
 }
 </style>
 

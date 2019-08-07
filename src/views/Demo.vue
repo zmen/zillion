@@ -51,7 +51,7 @@
         <h2 class="demo__title">navigation</h2>
         <grid :column="4">
           <grid-item text="tab" />
-          <grid-item text="tabbar" icon="tabbar" />
+          <grid-item text="tabbar" icon="tabbar" @click.native="goto('/demo/tabbar')" />
           <grid-item text="search" icon="search" />
           <grid-item text="header" icon="Header" />
         </grid>

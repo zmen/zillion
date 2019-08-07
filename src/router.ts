@@ -37,6 +37,10 @@ export default new Router({
         path: 'indexed',
         name: 'indexed',
         component: () => import(/* webpackChunkName: "indexed" */ './views/DemoIndexedList.vue'),
+      }, {
+        path: 'tabbar',
+        name: 'tabbar',
+        component: () => import(/* webpackChunkName: "tabbar" */ './views/DemoTabbar.vue'),
       }],
     },
   ],

@@ -6,15 +6,15 @@
         <h2 class="home__sub-title">Yet another Mobile UI Components of VueJs</h2>
       </div>
       <panel title="Basic" description="basic components" class="home__panel">
-        <cell title="button"> <icon name="Buttons" /></cell>
+        <cell title="button" @click.native="$router.push('/demo/button')"><icon name="Buttons" /></cell>
         <cell title="cell"><icon name="cell" /></cell>
         <cell title="flexbox"><icon name="stack" /></cell>
-        <cell title="icon"><icon name="icon" /></cell>
+        <cell title="icon" @click.native="$router.push('/demo/icon')"><icon name="icon" /></cell>
       </panel>
       <panel title="Display" description="component for display data" class="home__panel">
         <cell title="panel"><icon name="definedpanel" /></cell>
         <cell title="sticky"><icon name="stickynote" /></cell>
-        <cell title="indexed list"><icon name="list" /></cell>
+        <cell title="indexed list" @click.native="$router.push('/demo/indexed')"><icon name="list" /></cell>
         <cell title="loading"><icon name="Loading"/></cell>
         <cell title="lazyload"><icon name="image" /></cell>
         <cell title="swiper" />
@@ -37,7 +37,7 @@
       </panel>
       <panel title="Navigation">
         <cell title="tab"><icon name="tabs" /></cell>
-        <cell title="tabbar"><icon name="tabbar" /></cell>
+        <cell title="tabbar" @click.native="$router.push('/demo/tabbar')"><icon name="tabbar" /></cell>
         <cell title="search"><icon name="search" /></cell>
         <cell title="header"><icon name="Header" /></cell>
       </panel>
