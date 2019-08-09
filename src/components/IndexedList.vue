@@ -24,6 +24,8 @@
 import { Component, Vue } from 'vue-property-decorator';
 import TouchMixin from '@/mixins/touch.ts';
 import IndexedListAnchor from './IndexedListAnchor.vue';
+import { preventDefault } from '@/utils/event';
+import { scrollToPosition } from '@/utils/scroll';
 
 @Component
 export default class IndexedList extends TouchMixin {
@@ -57,12 +59,10 @@ export default class IndexedList extends TouchMixin {
   private onTouchMove(event: TouchEvent) {
     this.touchMove(event);
 
-    if (event.cancelable) {
-      event.preventDefault();
-    }
+    preventDefault(event);
 
     const { clientX, clientY } = event.touches[0];
-    const target = document.elementFromPoint(clientX, clientY) as HTMLInputElement;
+    const target = document.elementFromPoint(clientX, clientY) as HTMLElement;
     if (target) {
       const { index } = target.dataset;
       if (typeof index !== 'undefined') {
@@ -73,7 +73,7 @@ export default class IndexedList extends TouchMixin {
 
   private clickIndex(index: number) {
     const scrollInto = this.relativeOffsets[index];
-    this.$el.scrollTop = scrollInto;
+    scrollToPosition(this.$el as HTMLElement, this.$el.scrollTop, scrollInto);
     this.activeIndex = index;
   }
 }

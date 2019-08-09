@@ -41,6 +41,10 @@ export default new Router({
         path: 'tabbar',
         name: 'tabbar',
         component: () => import(/* webpackChunkName: "tabbar" */ './views/DemoTabbar.vue'),
+      }, {
+        path: 'popup',
+        name: 'popup',
+        component: () => import(/* webpackChunkName: "popup" */ './views/DemoPopup.vue'),
       }],
     },
   ],

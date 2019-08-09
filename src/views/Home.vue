@@ -5,42 +5,39 @@
         <h1 class="home__title">ZILLION</h1>
         <h2 class="home__sub-title">Yet another Mobile UI Components of VueJs</h2>
       </div>
-      <panel title="Basic" description="basic components" class="home__panel">
+
+      <panel title="Complete" description="both components and demo are completed">
         <cell title="button" @click.native="$router.push('/demo/button')"><icon name="Buttons" /></cell>
-        <cell title="cell"><icon name="cell" /></cell>
-        <cell title="flexbox"><icon name="stack" /></cell>
         <cell title="icon" @click.native="$router.push('/demo/icon')"><icon name="icon" /></cell>
-      </panel>
-      <panel title="Display" description="component for display data" class="home__panel">
-        <cell title="panel"><icon name="definedpanel" /></cell>
-        <cell title="sticky"><icon name="stickynote" /></cell>
         <cell title="indexed list" @click.native="$router.push('/demo/indexed')"><icon name="list" /></cell>
-        <cell title="loading"><icon name="Loading"/></cell>
-        <cell title="lazyload"><icon name="image" /></cell>
-        <cell title="swiper" />
-        <cell title="skeleton" />
-        <cell title="coupon" />
+        <cell title="tabbar" @click.native="$router.push('/demo/tabbar')"><icon name="tabbar" /></cell>
       </panel>
-      <panel title="Popups" description="poup, actionsheet, etc" class="home__panel">
+      <panel title="Developing" description="neither components or demo is uncompleted">
+        <cell title="cell"><icon name="cell" /></cell>
+        <cell title="header"><icon name="Header" /></cell>
+        <cell title="panel"><icon name="definedpanel" /></cell>
         <cell title="popup"><icon name="popup" /></cell>
-        <cell title="dialog"></cell>
-        <cell title="actionsheet" />
+        <cell title="tab"><icon name="tabs" /></cell>
       </panel>
-      <panel title="Form" description="form items" class="home__panel">
-        <cell title="upload"><icon name="Cloudupload"/></cell>
-        <cell title="datepicker"><icon name="date" /></cell>
+      <panel title="Pending" description="go go go">
+        <cell title="actionsheet" />
         <cell title="address"><icon name="address" /></cell>
-        <cell title="switch" />
-        <cell title="slider" />
+        <cell title="datepicker"><icon name="date" /></cell>
+        <cell title="flexbox"><icon name="stack" /></cell>
+        <cell title="loading"><icon name="Loading"/></cell>
+        <cell title="search"><icon name="search" /></cell>
+        <cell title="sticky"><icon name="stickynote" /></cell>
+        <cell title="upload"><icon name="Cloudupload"/></cell>
+        <cell title="coupon" />
+        <cell title="dialog" />
         <cell title="input" />
+        <cell title="skeleton" />
+        <cell title="slider" />
+        <cell title="swiper" />
+        <cell title="switch" />
         <cell title="textarea" />
       </panel>
-      <panel title="Navigation">
-        <cell title="tab"><icon name="tabs" /></cell>
-        <cell title="tabbar" @click.native="$router.push('/demo/tabbar')"><icon name="tabbar" /></cell>
-        <cell title="search"><icon name="search" /></cell>
-        <cell title="header"><icon name="Header" /></cell>
-      </panel>
+
     </div>
     <tabbar class="home__footer" v-model="tab">
       <tabbar-item name="home" icon="home" @click.native="$router.push('/')">Home</tabbar-item>

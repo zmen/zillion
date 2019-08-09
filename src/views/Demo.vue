@@ -10,6 +10,7 @@
         <grid :column="4">
           <grid-item text="button" icon="Buttons" @click.native="goto('/demo/button')" />
           <grid-item text="cell" icon="cell" />
+          <grid-item text="popup" icon="popup" @click.native="goto('/demo/popup')" />
           <grid-item text="flexbox" icon="stack" />
           <grid-item text="icon" icon="icon" @click.native="goto('/demo/icon')" />
         </grid>
@@ -30,7 +31,6 @@
       <div class="demo__block">
         <h2 class="demo__title">popup</h2>
         <grid :column="4">
-          <grid-item text="popup" icon="popup" />
           <grid-item text="dialog" />
           <grid-item text="actionsheet" />
         </grid>
