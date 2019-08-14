@@ -19,9 +19,9 @@ import {
 @Component
 export default class Panel extends Vue {
 
-  @Prop({default: 'title'}) private readonly title!: string;
+  @Prop({default: ''}) private readonly title!: string;
 
-  @Prop({default: 'description'}) private readonly description!: string;
+  @Prop({default: ''}) private readonly description!: string;
 }
 </script>
 

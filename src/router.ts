@@ -45,6 +45,14 @@ export default new Router({
         path: 'popup',
         name: 'popup',
         component: () => import(/* webpackChunkName: "popup" */ './views/DemoPopup.vue'),
+      }, {
+        path: 'cell',
+        name: 'cell',
+        component: () => import(/* webpackChunkName: "cell" */ './views/DemoCell.vue'),
+      }, {
+        path: 'tab',
+        name: 'tab',
+        component: () => import(/* webpackChunkName: "tab" */ './views/DemoTab.vue'),
       }],
     },
   ],

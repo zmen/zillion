@@ -8,16 +8,16 @@
 
       <panel title="Complete" description="both components and demo are completed">
         <cell title="button" @click.native="$router.push('/demo/button')"><icon name="Buttons" /></cell>
+        <cell title="cell" @click.native="$router.push('/demo/cell')"><icon name="cell" /></cell>
         <cell title="icon" @click.native="$router.push('/demo/icon')"><icon name="icon" /></cell>
         <cell title="indexed list" @click.native="$router.push('/demo/indexed')"><icon name="list" /></cell>
+        <cell title="panel" @click.native="$router.push('/demo/cell')"><icon name="definedpanel" /></cell>
+        <cell title="tab" @click.native="$router.push('/demo/tab')"><icon name="tabs" /></cell>
         <cell title="tabbar" @click.native="$router.push('/demo/tabbar')"><icon name="tabbar" /></cell>
       </panel>
       <panel title="Developing" description="neither components or demo is uncompleted">
-        <cell title="cell"><icon name="cell" /></cell>
         <cell title="header"><icon name="Header" /></cell>
-        <cell title="panel"><icon name="definedpanel" /></cell>
         <cell title="popup"><icon name="popup" /></cell>
-        <cell title="tab"><icon name="tabs" /></cell>
       </panel>
       <panel title="Pending" description="go go go">
         <cell title="actionsheet" />
